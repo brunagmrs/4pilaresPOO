@@ -15,18 +15,20 @@ Os atributos restantes não farão tanta diferença no banco, logo não precisam
 #### Classe Abstrata
 Uma classe que é genérica, como Animal, Pessoa, etc.
 
-Classes abstratas não podem ser instânciadas, elas geralmente são utilizadas como pai de outra classe (filho)
+Classes abstratas não podem ser instânciadas, elas são utilizadas como pai de outra classe (filho). As classes abstratas podem ter métodos abstratos e concretos, ou não possuir nenhum dos dois.
 
     
 <sub>animal.java</sub>
 
     public abstract class Animal{
+        private String nome;
 
+        public abstratic String locomover();
     }
 
 #### Métodos Abstratos 
     
-Métodos podem ser abstratos também, eles não possuem corpo na classe principal. Quando ele é sobrescrito em outra classe concreta, deve-se implementar sua funcionalidade no seu corpo.
+As classes abstratas possuem métodos abstratos, eles não possuem corpo na classe principal. Quando ele é sobrescrito em outra classe concreta, deve-se implementar sua funcionalidade no seu corpo.
 
 <sub>animal.java</sub>
     
