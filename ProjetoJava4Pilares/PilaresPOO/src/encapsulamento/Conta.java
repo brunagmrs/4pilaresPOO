@@ -1,7 +1,6 @@
 package encapsulamento;
-
 public class Conta {
-    
+
     //atributos
     //modificador de acesso private geralmente utilizados em atributos. Para garantir a segurança de dados
     private int numero;
@@ -9,7 +8,13 @@ public class Conta {
     private String tipo;
     private double saldo;
 
-    //construtor
+    //construtores
+    public Conta(){
+        this.numero = 0;
+        this.titular = "";
+        this.tipo = "poupança";
+        this.saldo = 0;
+    }
     public Conta(int numero, String titular, String tipo, double saldo) {
         this.numero = numero;
         this.titular = titular;
@@ -79,6 +84,10 @@ public class Conta {
     //toString
     @Override
     public String toString() {
-        return "Nº: " + getNumero() + " Titular: " + getTitular() + " Tipo: " + getTipo() + " Saldo: " + getSaldo() + "\n";
+        return "Nº: " + getNumero() + " - Titular: " + getTitular() + " - Tipo: " + getTipo() + " - Saldo: " + getSaldo();
+    }
+
+    public void extrato(){
+        System.out.println(this.toString());
     }
 }
